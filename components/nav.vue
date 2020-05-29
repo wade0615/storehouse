@@ -14,5 +14,4 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/sass" lang="sass" scoped src="./nav.sass">
-</style>
+<style rel="stylesheet/sass" lang="sass" scoped src="./styles/nav.sass"></style>
