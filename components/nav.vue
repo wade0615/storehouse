@@ -14,10 +14,5 @@ export default {
 }
 </script>
 
-<style lang="sass">
-*
-    border: solid 1px black
-
-.example
-    color: blue
+<style rel="stylesheet/sass" lang="sass" scoped src="./nav.sass">
 </style>
