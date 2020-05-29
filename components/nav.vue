@@ -14,11 +14,10 @@ export default {
 }
 </script>
 
-<style>
-* {
+<style lang="sass">
+*
     border: solid 1px black
-}
-.example {
-    color: red;
-}
+
+.example
+    color: blue
 </style>
