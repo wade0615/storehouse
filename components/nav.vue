@@ -3,12 +3,14 @@
         <button class="active_sidebar" v-on:click='activeSidebar()'><i class="fas fa-bars"></i></button>
         <h1>{{ msg }}</h1>
         <b-dropdown id="dropdown-right" right text="其他" variant="primary" class="m-2">
-            <b-dropdown-item>First Action</b-dropdown-item>
-            <b-dropdown-item>Second Action</b-dropdown-item>
-            <b-dropdown-item>Third Action</b-dropdown-item>
+            <b-dropdown-item active>First Action</b-dropdown-item>
+            <b-dropdown-item disabled>Second Action</b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
-            <b-dropdown-item active>Active action</b-dropdown-item>
-            <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+            <b-dropdown-item>Third Action</b-dropdown-item>
+            <b-dropdown-item class="pc_show">登入</b-dropdown-item>
+            <b-dropdown-item class="pc_show">註冊</b-dropdown-item>
+            <b-dropdown-item class="pc_show">切換語言</b-dropdown-item>
+            <b-dropdown-item class="pc_show">幣別</b-dropdown-item>
         </b-dropdown>
         <div class="side_bar" :class="{active: isActive}">
             <ul>
