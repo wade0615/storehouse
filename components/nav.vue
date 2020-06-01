@@ -1,7 +1,15 @@
 <template>
     <header class="logo">
-        <h1>{{ msg }}</h1>
         <button class="active_sidebar" v-on:click='activeSidebar()'><i class="fas fa-bars"></i></button>
+        <h1>{{ msg }}</h1>
+        <b-dropdown id="dropdown-right" right text="其他" variant="primary" class="m-2">
+            <b-dropdown-item>First Action</b-dropdown-item>
+            <b-dropdown-item>Second Action</b-dropdown-item>
+            <b-dropdown-item>Third Action</b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+            <b-dropdown-item active>Active action</b-dropdown-item>
+            <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+        </b-dropdown>
         <div class="side_bar" :class="{active: isActive}">
             <ul>
                 <li v-on:click='closeSidebar()'><span class="icon"><i class="fas fa-backspace"></i></span>返回</li>

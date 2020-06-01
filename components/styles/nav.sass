@@ -2,17 +2,22 @@
     // border: solid 1px black
 
 header
+    display: flex
+    justify-content: space-around
     position: relative
     background-color: rgba(173, 173, 173, 0.5)
     h1
+        flex: 2
         margin: 0
         font-size: 2rem
         text-align: center
+    .active_sidebar, .dropdown
+        flex: 1
     .active_sidebar
-        position: absolute
-        top: 0
-        left: 5%
-        height: 100%
+        // position: absolute
+        // top: 0
+        // left: 5%
+        // height: 100%
         font-size: 1.5rem
     .side_bar
         position: absolute
