@@ -1,0 +1,82 @@
+*
+    // border: solid 1px black
+
+@mixin rwd-sm
+    @media (min-width: 576px)
+        @content
+
+@mixin rwd-md
+    @media (min-width: 768px)
+        @content
+
+@mixin rwd-lg
+    @media (min-width: 992px)
+        @content
+
+header
+    display: flex
+    justify-content: space-around
+    position: relative
+    background-color: rgba(173, 173, 173, 0.5)
+    @include rwd-sm
+        justify-content: space-between
+        padding: 0 2rem
+        margin: 0 auto
+        max-width: 1200px
+    h1
+        flex: 2
+        margin: 0
+        font-size: 2rem
+        text-align: center
+        @include rwd-sm
+            text-align: left
+    .active_sidebar, .dropdown
+        flex: 1
+        @include rwd-sm
+            flex: 0
+    .active_sidebar
+        // position: absolute
+        // top: 0
+        // left: 5%
+        // height: 100%
+        font-size: 1.5rem
+        @include rwd-sm
+            display: none
+    .pc_show
+        display: none
+        @include rwd-sm
+            display: block
+    .side_bar
+        position: absolute
+        top: 0
+        left: -100vh
+        width: 100vw
+        height: 100vh
+        font-size: 0
+        transition-duration: 1s
+        @include rwd-sm
+            display: none
+        ul
+            display: inline-block
+            vertical-align: top
+            margin: 0
+            padding: 0
+            height: 100%
+            width: 70%
+            background-color: #fff
+            li
+                padding: 1rem
+                list-style-type: none
+                font-size: 1.5rem
+                .icon
+                    display: inline-block
+                    width: 3rem
+                    text-align: center
+        > div
+            display: inline-block
+            width: 25%
+            height: 100%
+
+    .active
+        left: 0
+        background-color: rgba(225, 225, 225, 0.5)

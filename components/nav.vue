@@ -1,19 +1,48 @@
 <template>
-    <div class="example">{{ msg }}</div>
+    <header class="logo">
+        <button class="active_sidebar" v-on:click='activeSidebar()'><i class="fas fa-bars"></i></button>
+        <h1>{{ msg }}</h1>
+        <b-dropdown id="dropdown-right" right text="其他" variant="primary" class="m-2">
+            <b-dropdown-item active>First Action</b-dropdown-item>
+            <b-dropdown-item disabled>Second Action</b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+            <b-dropdown-item>Third Action</b-dropdown-item>
+            <b-dropdown-item class="pc_show">登入</b-dropdown-item>
+            <b-dropdown-item class="pc_show">註冊</b-dropdown-item>
+            <b-dropdown-item class="pc_show">切換語言</b-dropdown-item>
+            <b-dropdown-item class="pc_show">幣別</b-dropdown-item>
+        </b-dropdown>
+        <div class="side_bar" :class="{active: isActive}">
+            <ul>
+                <li v-on:click='closeSidebar()'><span class="icon"><i class="fas fa-backspace"></i></span>返回</li>
+                <li><span class="icon"><i class="fas fa-sign-in-alt"></i></span>登入</li>
+                <li><span class="icon"><i class="fas fa-user-alt"></i></span>註冊</li>
+                <li><span class="icon"><i class="fas fa-language"></i></span>切換語言</li>
+                <li><span class="icon"><i class="fas fa-search-dollar"></i></span>幣別</li>
+            </ul>
+            <div v-on:click.stop='closeSidebar()'></div>
+        </div>
+    </header>
 </template>
 
 <script>
 export default {
     data () {
         return {
-            msg: `I'll be the navbar.`
+            msg: `Logo`,
+            isActive: false
         }
-    }
+    },
+    methods: {
+        activeSidebar(){
+            console.log('your active');
+            this.isActive = true
+        },
+        closeSidebar(){
+            this.isActive = false
+        }
+    },
 }
 </script>
 
-<style>
-.example {
-    color: red;
-}
-</style>
+<style rel="stylesheet/sass" lang="sass" scoped src="./styles/nav.sass"></style>
