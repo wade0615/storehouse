@@ -39,5 +39,10 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin()
-    ]
+    ],
+    resolve: { 
+        alias: { 
+            'vue': 'vue/dist/vue.js' 
+        } 
+    }
 }
