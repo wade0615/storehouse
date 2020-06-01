@@ -20,8 +20,29 @@ header
         left: -100vh
         width: 100vw
         height: 100vh
+        font-size: 0
         transition-duration: 1s
+        ul
+            display: inline-block
+            vertical-align: top
+            margin: 0
+            padding: 0
+            height: 100%
+            width: 70%
+            background-color: #fff
+            li
+                padding: 1rem
+                list-style-type: none
+                font-size: 1.5rem
+                .icon
+                    display: inline-block
+                    width: 3rem
+                    text-align: center
+        > div
+            display: inline-block
+            width: 25%
+            height: 100%
 
     .active
         left: 0
-        background-color: rgba(255, 0, 0, 0.5)
+        background-color: rgba(100, 200, 100, 0.5)
