@@ -17,7 +17,7 @@
 
 describe('My First Test', function() {
     it('finds the content "type"', function() {
-      cy.visit('http://127.0.0.1:5500/index.html')
+      cy.visit('/')
   
       // cy.contains('其他').click()
 
