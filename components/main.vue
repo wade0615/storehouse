@@ -1,7 +1,17 @@
 <template>
     <main>
         <h2>{{ content.id }}. {{ content.title }}</h2>
-        <p>{{ msg }}</p>
+
+        <div>
+            <b-card-group deck class="card_group">
+                <b-card v-for="msg in msgs" :title="msg" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
+                    <b-card-text>
+                        This is a wider card below as a natural lead-in to additional content.
+                    </b-card-text>
+                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                </b-card>
+            </b-card-group>
+        </div>
     </main>
 </template>
 
@@ -10,7 +20,7 @@ export default {
     props: ['content'],
     data () {
         return {
-            msg: `Main content`
+            msgs: [`Card title 1`,`Card title 2`,`Card title 3`,`Card title 4`,`Card title 5`]
         }
     },
     methods: {
