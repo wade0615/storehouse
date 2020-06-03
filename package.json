@@ -14,6 +14,7 @@
     "@vue/cli": "^4.4.1",
     "@vue/cli-service-global": "^4.4.1",
     "cypress": "^4.7.0",
+    "cypress-vue-unit-test": "^2.0.1",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",

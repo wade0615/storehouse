@@ -31,12 +31,8 @@
 //     })
 //   })
 
-
-const testingJS = require('../../components/main.vue');
-
 describe('My First Test', function() {
   it('test add ', function() {
     expect(2 + 2).to.equal(4);
-    expect(testingJS.data().msg).to.equal('Logo');
   });
 })
