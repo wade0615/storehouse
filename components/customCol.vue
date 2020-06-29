@@ -2,15 +2,17 @@
   <section>
     <h2>{{ title }}</h2>
     <b-button-group>
-      <b-button variant="success">col-6 col-6</b-button>
-      <b-button variant="info">col-4 col-8</b-button>
-      <b-button variant="warning">col-3 col-9</b-button>
+      <b-button variant="success" @click='col_6();inner_html();'>col-6 col-6</b-button>
+      <b-button variant="info" @click='col_4();inner_html();'>col-4 col-8</b-button>
+      <b-button variant="warning" @click='col_3();inner_html();'>col-3 col-9</b-button>
     </b-button-group>
-    <p class="row">
-      <span>{{ loremText }}<img class="col-12 col-sm-6 col-md-4 col-lg-3" src="https://picsum.photos/300/300/" alt="">
+    <p id="article" class="row">
+      <span>{{ loremText }}<img id="article_img" class="col-12 col-sm-6" src="https://picsum.photos/300/300/" alt="">
       {{ loremText }}{{ loremText }}
       </span>
-      <span>{{ loremText }}</span>
+      <span>{{ loremText }}{{ loremText }}</span>
+      <span>{{ loremText }}{{ loremText }}</span>
+      <span>{{ loremText }}{{ loremText }}</span>
     </p>
   </section>
 </template>
@@ -24,8 +26,26 @@ export default {
         }
     },
     methods: {
-        // mainfunc(){
-        // }
+        col_6(){
+          console.log('col-6')
+          let articleImg = document.querySelector('#article_img')
+          articleImg.setAttribute("class", "col-12 col-sm-6");
+        },
+        col_4(){
+          console.log('col-4')
+          let articleImg = document.querySelector('#article_img')
+          articleImg.setAttribute("class", "col-12 col-sm-6 col-md-4");
+        },
+        col_3(){
+          console.log('col-3')
+          let articleImg = document.querySelector('#article_img')
+          articleImg.setAttribute("class", "col-12 col-sm-6 col-md-4 col-lg-3");
+        },
+        inner_html(){
+          console.log('innerHTML')
+          let article = document.querySelector('#article')
+          console.log(article.innerHTML)
+        }
     },
     beforeMount(){
         // this.mainfunc()

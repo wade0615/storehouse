@@ -35,8 +35,8 @@ new Vue({
     `<div>
         <navbar></navbar>
         <main>
-            <maincontent v-for="content in contents" :content="content"></maincontent>
             <customColumn></customColumn>
+            <maincontent v-for="content in contents" :content="content"></maincontent>
         </main>
     </div>`,
     components: { 
