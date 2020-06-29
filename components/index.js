@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import nav from './nav.vue'
 import main from './main.vue'
+import customCol from './customCol.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -34,10 +35,12 @@ new Vue({
     `<div>
         <navbar></navbar>
         <maincontent v-for="content in contents" :content="content"></maincontent>
+        <customColumn></customColumn>
     </div>`,
     components: { 
         navbar: nav,
-        maincontent: main
+        maincontent: main,
+        customColumn: customCol,
     },
     mounted : function(){
         console.log('Hello Webpack and Vue !');  
