@@ -3,11 +3,11 @@
     <h2>{{ title }}</h2>
     <b-button-group>
       <b-button variant="success">col-6 col-6</b-button>
-      <b-button variant="info">col-3 col-9</b-button>
-      <b-button variant="warning">col-9 col-3</b-button>
+      <b-button variant="info">col-4 col-8</b-button>
+      <b-button variant="warning">col-3 col-9</b-button>
     </b-button-group>
     <p class="row">
-      <span>{{ loremText }}<img class="col-6" src="https://picsum.photos/300/300/" alt="">
+      <span>{{ loremText }}<img class="col-12 col-sm-6 col-md-4 col-lg-3" src="https://picsum.photos/300/300/" alt="">
       {{ loremText }}{{ loremText }}
       </span>
       <span>{{ loremText }}</span>
