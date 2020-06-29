@@ -2,10 +2,11 @@
   <section>
     <h2>{{ title }}</h2>
     <b-button-group>
-      <b-button variant="success" @click='col_6();inner_html();'>col-6 col-6</b-button>
+      <b-button variant="success" @click='col_6();inner_html();get_file();'>col-6 col-6</b-button>
       <b-button variant="info" @click='col_4();inner_html();'>col-4 col-8</b-button>
       <b-button variant="warning" @click='col_3();inner_html();'>col-3 col-9</b-button>
     </b-button-group>
+    <input type="file" id="file_uploader" accept="image/*"></input>
     <p id="article" class="row">
       <span>{{ loremText }}<img id="article_img" class="col-12 col-sm-6" src="https://picsum.photos/300/300/" alt="">
       {{ loremText }}{{ loremText }}
@@ -44,7 +45,11 @@ export default {
         inner_html(){
           console.log('innerHTML')
           let article = document.querySelector('#article')
-          console.log(article.innerHTML)
+          // console.log(article.innerHTML)
+        },
+        get_file(){
+          let data = document.querySelector('#file_uploader')
+          console.log(data.value)
         }
     },
     beforeMount(){
