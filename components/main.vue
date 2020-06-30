@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <h2>{{ content.id }}. {{ content.title }}</h2>
 
         <div>
@@ -14,7 +14,7 @@
                 </b-card>
             </b-card-group>
         </div>
-    </main>
+    </section>
 </template>
 
 <script>
